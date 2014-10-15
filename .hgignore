@@ -1,4 +1,5 @@
 syntax: glob
 cache/*
 output/*
+themes/pelican-bootstrap3/.git/*
 *.pyc
