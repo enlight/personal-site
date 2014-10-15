@@ -7,12 +7,36 @@ SITENAME = u'Vadim Macagon'
 SITEURL = ''
 
 PATH = 'content'
+# Static paths Pelican will copy without parsing.
+STATIC_PATHS = ['images', 'extra/CNAME']
+# Get Pelican to copy the CNAME to the output directory so the custom sub-domain
+# works with GitHub Pages.
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 
 TIMEZONE = 'Asia/Bangkok'
 DEFAULT_LANG = u'en'
 
 TYPOGRIFY = True
 THEME = "themes/pelican-bootstrap3"
+
+ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+PAGE_URL = 'page/{slug}/'
+PAGE_SAVE_AS = 'page/{slug}/index.html'
+CATEGORY_URL = 'category/{slug}/'
+CATEGORY_SAVE_AS = 'category/{slug}/index.html'
+CATEGORIES_URL = 'categories/'
+CATEGORIES_SAVE_AS = 'categories/index.html'
+TAG_URL = 'tag/{slug}/'
+TAG_SAVE_AS = 'tag/{slug}/index.html'
+TAGS_URL = 'tags/'
+TAGS_SAVE_AS = 'tags/index.html'
+ARCHIVES_URL = 'archives/'
+ARCHIVES_SAVE_AS = 'archives/index.html'
+
+# Only one author, so no need for these.
+AUTHOR_SAVE_AS = ''
+AUTHORS_SAVE_AS = ''
 
 # Settings specific to the pelican-bootstrap3 theme
 BOOTSTRAP_THEME = 'readable'
@@ -49,3 +73,6 @@ DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+TAG_CLOUD_STEPS = 4
+
