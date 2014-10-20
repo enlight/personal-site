@@ -17,7 +17,8 @@ TIMEZONE = 'Asia/Bangkok'
 DEFAULT_LANG = u'en'
 
 TYPOGRIFY = True
-THEME = "themes/pelican-bootstrap3"
+THEME = 'themes/pelican-bootstrap3'
+PYGMENTS_STYLE = 'vs'
 
 ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
@@ -76,3 +77,8 @@ DEFAULT_PAGINATION = False
 
 TAG_CLOUD_STEPS = 4
 
+#PLUGIN_PATHS = ['../../pelican-plugins/']
+#PLUGINS = ['better_figures_and_images']
+
+# Settings for the better_figures_and_images plugin
+#RESPONSIVE_IMAGES = True
