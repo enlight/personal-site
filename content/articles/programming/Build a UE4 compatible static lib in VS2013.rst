@@ -1,8 +1,7 @@
 Build a UE4 compatible static lib in VS2013
 ###########################################
 
-:status: draft
-:date: 2014-10-16 18:50
+:date: 2014-10-29 22:00
 :tags: ue4, c++
 :category: programming
 :author: Vadim Macagon
@@ -11,15 +10,14 @@ Introduction
 ============
 
 This is the first tutorial in a two (or maybe three) part series that will explain how to integrate
-libraries not built by :abbr:`UBT (Unreal Build Tool)` into your UE4 games or plugins. In this 
-tutorial we're going to cover building of static libraries in VS2013, but most of this is also 
-going to apply if you're building dynamic libraries.
+libraries not built by :abbr:`UBT (Unreal Build Tool)` into your UE4 games or plugins. This
+tutorial will cover building of static libraries in VS2013, but most of this will also apply when 
+building dynamic libraries.
 
-In this tutorial we'll build the `pugixml`_ library, a small and lightweight
-XML processing library written in C++. I've chosen this library because it doesn't have any 
-dependencies, only consists of three source files, and is easy to configure, so we can focus on
-the details that are specifically relevant to Unreal Engine 4. The final VS2013 
-project is available on `GitHub`_.
+We're going to build the `pugixml`_ library, a small and lightweight XML processing library written
+in C++. I've chosen this library because it doesn't have any dependencies, only consists of three 
+source files, and is easy to configure, so we can focus on the details that are specifically 
+relevant to Unreal Engine 4. The final VS2013 project is available on `GitHub`_.
 
 .. _pugixml: http://pugixml.org/
 .. _GitHub: https://github.com/enlight/
@@ -74,12 +72,16 @@ project. To do so:
 
    .. image:: /images/pugixml/PugiXml-Property-Pages-01.png
       :alt: Press on the Configuration Manager button on the Property Pages window.
+	  
+   |
 
 2. Add a new platform:
 
    .. image:: /images/pugixml/PugiXml-Property-Pages-02.png
       :alt: Select New from the Active solution platform drop-down.
 
+   |
+   
 3. Select **x64** from the drop-down, and press **OK**:
 
    .. image:: /images/pugixml/PugiXml-Property-Pages-03.png
@@ -99,11 +101,15 @@ you, however, future tutorials may assume you've set things up as described here
    - *Intermediate Directory*: **$(SolutionDir)Obj\\Win32\\$(Configuration)\\**
    - *Target Name*: **$(ProjectName)-Win32-$(Configuration)**
    
+   |
+   
 4. Press the **Apply** button.
    
    .. image:: /images/pugixml/PugiXml-Property-Pages-04.png
       :alt: None
 
+   |
+	  
 5. Select *x64* from the **Platform** drop-down.
 6. Set the following properties under the **Configuration Properties/General** section as indicated:
 
@@ -111,11 +117,15 @@ you, however, future tutorials may assume you've set things up as described here
    - *Intermediate Directory*: **$(SolutionDir)Obj\\Win64\\$(Configuration)\\**
    - *Target Name*: **$(ProjectName)-Win64-$(Configuration)**
    
+   |
+   
 7. Press the **Apply** button.
 
    .. image:: /images/pugixml/PugiXml-Property-Pages-05.png
       :alt: None
-	  
+	
+   |
+   
 8. Select *All Platforms* from the **Platform** drop-down.
 9. Ensure that the *Character Set* property is set to **Use Unicode Character Set**.
 
@@ -128,12 +138,16 @@ C/C++ Properties
    
    .. image:: /images/pugixml/PugiXml-Property-Pages-06.png
       :alt: None
+	  
+   |
    
 3. On the **Configuration Properties/Language** page set *Enable Run-Time Type Information* to **No**,
    and press the **Apply** button.
    
    .. image:: /images/pugixml/PugiXml-Property-Pages-07.png
       :alt: None
+   
+   |
    
 4. Return to the **Configuration Properties/Code Generation** page.
 5. Select the *Debug* configuration, and ensure **Runtime Library** is set to 
