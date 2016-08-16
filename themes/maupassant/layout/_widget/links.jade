@@ -1,6 +1,8 @@
 .widget
-  .widget-title
-    i(class='fa fa-external-link')= ' ' + __('blogroll')
-  - for (var i in theme.links)
-    ul
-    a(href='#{theme.links[i].url}' title='#{theme.links[i].title}' target='_blank') #{theme.links[i].title}
+  .widget-title social
+  ul
+    for social_link in theme.links
+      li
+        i(class='fa #{social_link.icon}')
+        | 
+        a(href='#{social_link.url}' title='#{social_link.title}' target='_blank') #{social_link.title}
