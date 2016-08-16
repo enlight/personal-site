@@ -1,5 +1,8 @@
 syntax: glob
-cache/*
-output/*
-themes/pelican-bootstrap3/.git/*
-*.pyc
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/*
+public/*
+.deploy*/
