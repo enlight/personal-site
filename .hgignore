@@ -6,3 +6,5 @@ db.json
 node_modules/*
 public/*
 .deploy*/
+.BROWSE.VC.DB
+.BROWSE.VC.DB-wal
