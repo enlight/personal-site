@@ -18,10 +18,12 @@ widgets_on_small_screens: false ## Set to true to enable widgets on small screen
 menu:
   - page: blog
     directory: .
-  - page: archive
-    directory: archives/
+  - page: projects
+    directory: projects/
   - page: about
     directory: about/
+  - page: archive
+    directory: archives/
   - page: rss
     directory: atom.xml
     icon: fa-rss
