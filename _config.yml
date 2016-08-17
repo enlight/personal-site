@@ -44,6 +44,19 @@ highlight:
   auto_detect: false
   tab_replace:
 
+# Markdown-it config
+## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
+markdown:
+  render:
+    html: true
+    xhtmlOut: true
+    breaks: false
+    linkify: false
+    typographer: true
+    quotes: '“”‘’'
+  plugins:
+    - markdown-it-abbr
+
 # Category & Tag
 default_category: programming
 category_map:

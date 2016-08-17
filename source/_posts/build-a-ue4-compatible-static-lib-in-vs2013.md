@@ -8,14 +8,15 @@ tags:
 
 # Introduction
 
-This is the first tutorial in a two (or maybe three) part series that will explain how to integrate
-libraries not built by `UBT` (Unreal Build Tool) into your UE4 games or plugins. This tutorial will
-cover building of static libraries in VS2013, but most of this will also apply when building
-dynamic libraries.
+*[UBT]: Unreal Build Tool
 
-We're going to build the [pugixml][pugixml] library, a small and lightweight XML processing library written
-in C++. I've chosen this library because it doesn't have any dependencies, only consists of three 
-source files, and is easy to configure, so we can focus on the details that are specifically 
+This is the first tutorial in a two (or maybe three) part series that will explain how to integrate
+libraries not built by UBT into your UE4 games or plugins. This tutorial will cover building of
+static libraries in VS2013, but most of this will also apply when building dynamic libraries.
+
+We're going to build the [pugixml][pugixml] library, a small and lightweight XML processing library
+written in C++. I've chosen this library because it doesn't have any dependencies, only consists of
+three source files, and is easy to configure, so we can focus on the details that are specifically 
 relevant to Unreal Engine 4. The final VS2013 project is available on [GitHub][ue4-pugixml-module].
 
 [pugixml]: http://pugixml.org/
@@ -34,20 +35,22 @@ instead of `char`), so lets enable Unicode support in `pugixml`:
    #define PUGIXML_WCHAR_MODE
    #endif // UNICODE
 ```
-   
-Usage of the `STL` (Standard Template Library) is frowned upon in Unreal Engine 4 code
-because it comes with its own set of standard-for-ue4 classes you should use instead. Third party
-libraries can still use the STL if needed. `pugixml` has the ability to use the `STL` for strings
-and streams, but it can also work quite happily without it, so lets remove the `STL` dependency:
+
+*[STL]: Standard Template Library
+
+Usage of the STL is frowned upon in Unreal Engine 4 code because it comes with its own set of
+standard-for-ue4 classes you should use instead. Third party libraries can still use the STL if
+needed. `pugixml` has the ability to use the STL for strings and streams, but it can also work
+quite happily without it, so lets remove the STL dependency:
 
 ```c++
    // Uncomment this to disable STL
    #define PUGIXML_NO_STL
 ```
    
-By default `UBT` will build projects with C++ exceptions disabled, 
-it's best to keep this setting consistent across all the libraries that are linked into
-a game project. We can prevent `pugixml` from throwing C++ exceptions like so:
+By default UBT will build projects with C++ exceptions disabled, it's best to keep this setting
+consistent across all the libraries that are linked into a game project. We can prevent `pugixml`
+from throwing C++ exceptions like so:
 
 ```c++
    // Uncomment this to disable exceptions
