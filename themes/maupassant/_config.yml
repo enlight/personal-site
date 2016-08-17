@@ -13,16 +13,15 @@ shareto: false ## If you want to use the share button please set the value to tr
 busuanzi: false ## If you want to use Busuanzi page views please set the value to true.
 widgets_on_small_screens: false ## Set to true to enable widgets on small screens.
 
+## Defines the top-right navigation menu/tabs.
+## Each tab can have an optional `icon` (identified by a FontAwesome class). 
 menu:
   - page: blog
     directory: .
-    icon: fa-home
   - page: archive
     directory: archives/
-    icon: fa-archive
   - page: about
     directory: about/
-    icon: fa-user
   - page: rss
     directory: atom.xml
     icon: fa-rss
