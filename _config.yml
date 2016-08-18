@@ -39,10 +39,14 @@ post_asset_folder: false
 relative_link: true
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace:
+code_mirror:
+  enable: true
+  theme: default
+  line_number: true
 
 # Markdown-it config
 ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
