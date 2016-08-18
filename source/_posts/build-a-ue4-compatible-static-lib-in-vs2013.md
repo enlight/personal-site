@@ -1,6 +1,7 @@
 ---
 title: Build a UE4 compatible static lib in VS2013
 date: 2014-10-29 22:00:00
+description: Tutorial that covers building the pugixml C++ library for UE4.
 tags:
 - ue4
 - c++
@@ -29,7 +30,7 @@ The library can be configured by editing `pugiconfig.hpp`.
 Unreal Engine 4 uses the Unicode character set by default (characters are represented by `wchar_t` 
 instead of `char`), so lets enable Unicode support in `pugixml`:
 
-```c++
+```cpp
    #ifdef UNICODE
    // Uncomment this to enable wchar_t mode
    #define PUGIXML_WCHAR_MODE
@@ -43,7 +44,7 @@ standard-for-ue4 classes you should use instead. Third party libraries can still
 needed. `pugixml` has the ability to use the STL for strings and streams, but it can also work
 quite happily without it, so lets remove the STL dependency:
 
-```c++
+```cpp
    // Uncomment this to disable STL
    #define PUGIXML_NO_STL
 ```
@@ -52,7 +53,7 @@ By default UBT will build projects with C++ exceptions disabled, it's best to ke
 consistent across all the libraries that are linked into a game project. We can prevent `pugixml`
 from throwing C++ exceptions like so:
 
-```c++
+```cpp
    // Uncomment this to disable exceptions
    #define PUGIXML_NO_EXCEPTIONS
 ```
