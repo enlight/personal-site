@@ -6,6 +6,8 @@
  * @link http://chopstack.com
  */
 
+@import url("//fonts.googleapis.com/css?family=Raleway:400,700");
+
 /*
 pure css setting
 When setting the primary font stack, apply it to the Pure grid units along
@@ -15,17 +17,15 @@ specific font stacks to ensure the greatest OS/browser compatibility.
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"] {
     /* Set your content font stack here: */
-    font-family: "PingFangSC-Regular", Helvetica, "Helvetica Neue", "Segoe UI",
-                 "Hiragino Sans GB", "Source Han Sans CN", "Microsoft YaHei", "STHeiti", "WenQuanYi Micro Hei", sans-serif;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body {
     background-color: #FFF;
     color: #444;
-    font-family: "TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: 14px;
+    font-size: 0.9em;
 }
 .body_container {
     padding: 0 60px;
@@ -71,7 +71,8 @@ div {
             overflow: hidden;
         }
         #logo {
-            font: bold 38px/1.12 "Times New Roman", Georgia, Times, sans-serif;
+            font-weight: bold;
+            font-size: 2em;
             color: #555;
             span, &:hover {
                 color: #777;
@@ -93,7 +94,7 @@ div {
             padding: 3px 20px 3px;
             line-height: 30px;
             color: #444;
-            font-size: 13px;
+            font-size: 0.8em;
             border: 1px solid transparent;
             text-transform: uppercase;
             &:hover {
@@ -119,7 +120,7 @@ div {
             color: #6E7173;
             line-height: 2.7;
             margin-top: 0;
-            font-size: 16px;
+            font-size: 1em;
             border-bottom: 1px solid #ddd;
             display: block;
             font-weight: normal;
@@ -129,7 +130,7 @@ div {
             color: #6E7173;
             line-height: 2.7;
             margin-top: 0;
-            font-size: 16px;
+            font-size: 1em;
             border-bottom: 0px solid #ddd;
             display: block;
             font-weight: normal;
@@ -199,7 +200,8 @@ div {
         margin: 0;
         color: #555;
         text-align: left;
-        font: bold 25px/1.1 "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+        font-weight: bold;
+        font-size: 1.5em;
         a {
             color: #555;
         }
@@ -265,7 +267,7 @@ div {
     }
     .post-content {
         clear: left;
-        font-size: 15px;
+        font-size: 1em;
         line-height: 1.5;
         color: #444;
         padding-top: 15px;
@@ -409,7 +411,7 @@ div {
     color: #6E7173;
     text-align: center;
     span {
-        font-size: .9em;
+        font-size: 0.9em;
     }
 }
 
@@ -420,7 +422,8 @@ div {
     padding-bottom: .8em;
     h2 {
         margin: 0;
-        font: bold 25px / 1.1 "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+        font-weight: bold;
+        font-size: 25px / 1.1;
     }
     .date {
         padding-right: .7em;
@@ -628,7 +631,6 @@ pre {
     text-align: left;
 }
 #process span.number {
-    font-family: 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
     font-style: italic;
     font-size: 20px;
     line-height: 0;
@@ -655,7 +657,6 @@ pre {
     transform: rotate(180deg);
 }
 .timeline-label p {
-    font-family: Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
     margin-bottom: 3px
 }
 #process .timeline-centered .timeline-entry .timeline-entry-inner {
@@ -753,7 +754,6 @@ pre {
 #process .present,
 #process .born {
   font-size: 14px;
-  font-family: 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
   font-style: italic;
   color: #333;
   padding: 10px;
@@ -840,7 +840,7 @@ pre {
 
 /* read more*/
 .readmore a {
-    font-size: 14px;
+    font-size: 0.8em;
     color: #444;
     margin: -10px 0;
     padding: 5px 10px;
@@ -1050,7 +1050,7 @@ figure.highlight,
     }
     // Meta bar which contains name of the file and his link
     figcaption {
-        font-size:     13px;
+        font-size:     0.7em;
         padding:       0 15px 20px;
         margin:        0;
         background:    #f7f8f8;
@@ -1085,7 +1085,7 @@ figure.highlight,
     // All lines in gutter and code container
     .line {
         height:    1.3em;
-        font-size: 13px;
+        font-size: 1em;
     }
 }
 
@@ -1628,8 +1628,8 @@ figure.highlight,
       border-top: 1px solid #eee;
       a {
         display: inline-block;
-        line-height: 25px;
-        font-size: 15px;
+        line-height: 1.5em;
+        font-size: 1em;
         color: #555;
         border-bottom: none;
         float: left;
