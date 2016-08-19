@@ -62,7 +62,9 @@ a:focus {
 div {
     box-sizing: border-box;
 }
-
+.color-on-hover:hover {
+    color: $emphasis-color;
+}
 #header {
     padding: 20px 0 0;
     text-align: left;
