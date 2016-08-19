@@ -195,9 +195,9 @@ div {
 }
 
 .post {
-    padding: 25px 0 15px;
-    .post-title {
-        margin: 0;
+    padding: 0 0 15px;
+    post-title {
+        margin: 0 0 1.4em;
         color: #555;
         text-align: left;
         font-weight: bold;
@@ -205,6 +205,9 @@ div {
         a {
             color: #555;
         }
+    }
+    .post-index.post-title {
+        margin: .67em 0 0 0;
     }
     .post-meta {
         padding: 0;
@@ -270,7 +273,6 @@ div {
         font-size: 1em;
         line-height: 1.5;
         color: #444;
-        padding-top: 15px;
         word-break: normal;
         h2 {
             margin: 1.4em 0 1.1em;

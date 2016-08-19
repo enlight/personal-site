@@ -9,8 +9,8 @@ block title
 block content
 
   for post in page.posts.toArray()
-    .post
-      h2.post-title
+    .post.post-index
+      h2.post-title.post-index
         include _partial/helpers
         a(href=url_for(post.path))
           +title(post)
