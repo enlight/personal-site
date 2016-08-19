@@ -8,6 +8,12 @@
 
 @import url("//fonts.googleapis.com/css?family=Raleway:400,700");
 
+$site-background-color: #F9F9F9;
+$emphasis-color: #7200FF;
+$primary-border-color: #ddd;
+$code-block-background-color: #f0f0f0;
+$code-line-number-color: #aaa;
+
 /*
 pure css setting
 When setting the primary font stack, apply it to the Pure grid units along
@@ -21,7 +27,7 @@ html, button, input, select, textarea,
 }
 
 body {
-    background-color: #FFF;
+    background-color: $site-background-color;
     color: #444;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -60,7 +66,7 @@ div {
 #header {
     padding: 20px 0 0;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid $primary-border-color;
     position: relative;
     .site-name {
         margin-bottom: 40px;
@@ -94,22 +100,23 @@ div {
             padding: 3px 20px 3px;
             line-height: 30px;
             color: #444;
-            font-size: 0.8em;
+            font-size: 0.9em;
             border: 1px solid transparent;
             text-transform: uppercase;
             &:hover {
-                border-bottom-color: #444;
+                border-bottom-color: $emphasis-color;
             }
             &.current {
-                border: 1px solid #ddd;
-                border-bottom-color: #fff;
+                font-weight: bold;
+                border: 1px solid $primary-border-color;
+                border-bottom-color: $site-background-color;
             }
         }
     }
 }
 
 #sidebar {
-    border-left: 1px solid #ddd;
+    border-left: 1px solid $primary-border-color;
     padding-left: 35px;
     margin-top: 40px;
     padding-bottom: 20px;
@@ -121,7 +128,7 @@ div {
             line-height: 2.7;
             margin-top: 0;
             font-size: 1em;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid $primary-border-color;
             display: block;
             font-weight: normal;
             text-transform: capitalize;
@@ -131,7 +138,7 @@ div {
             line-height: 2.7;
             margin-top: 0;
             font-size: 1em;
-            border-bottom: 0px solid #ddd;
+            border-bottom: 0px solid $primary-border-color;
             display: block;
             font-weight: normal;
         }
@@ -170,7 +177,7 @@ div {
                 background: #fff 8px 8px no-repeat
                     url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6%2BR8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAG11AABzoAAA%2FN0AAINkAABw6AAA7GgAADA%2BAAAQkOTsmeoAAAESSURBVHjajNCxS9VRGMbxz71E4OwgoXPQxVEpXCI47%2BZqGP0LCoJO7UVD3QZzb3SwcHB7F3Uw3Zpd%2FAPCcJKG7Dj4u%2FK7Pwp94HDg5Xyf5z1Pr9YKImKANTzFXxzjU2ae6qhXaxURr%2FAFl9hHDy%2FwEK8z89sYVEp5gh84wMvMvGiSJ%2FEV85jNzLMR1McqfmN5BEBmnmMJFSvtpH7jdJiZv7q7Z%2BZPfMdcF6rN%2FT%2F1m2LGBkd4HhFT3dcRMY2FpskxaLNpayciHrWAGeziD7b%2BVfkithuTk8bkGa4wgWFmbrSTZOYeBvjc%2BucQj%2FEe6xHx4Taq1nrnKaW8K6XUUsrHWuvNevdRRLzFGwzvDbXAB9cDAHvhedDruuxSAAAAAElFTkSuQmCC);
                 padding: 7px 11px 7px 28px;
-                line-height: 16px;
+                line-height: 1em;
                 border: 1px solid #bbb;
                 width: 65%;
                 -webkit-border-radius: 5px;
@@ -181,6 +188,9 @@ div {
                 -webkit-box-shadow: none;
                 -moz-box-shadow: none;
                 box-shadow: none;
+            }
+            input:focus {
+                border-color: $emphasis-color;
             }
         }
     }
@@ -285,14 +295,14 @@ div {
         pre code {
             padding: 0 2em;
         }
+        code {
+            display: inline-block;
+            margin: 0;
+            padding: 0 5px;
+            background: $code-block-background-color;
+        }
         p {
             margin: 0 0 1.234em;
-            code {
-                display: inline-block;
-                margin: 0;
-                padding: 0 5px;
-                background: #f7f8f8;
-            }
             a {
                 color: #01579f;
                 padding-bottom: 2px;
@@ -328,12 +338,6 @@ div {
             ul {
                 margin: 0;
             }
-            code {
-                display: inline-block;
-                margin: 0;
-                padding: 0px 5px;
-                background: #f7f8f8;
-            }
             a {
                 color: #01579f;
                 padding-bottom: 2px;
@@ -358,7 +362,7 @@ div {
 }
 
 .page-navigator {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid $primary-border-color;
     list-style: none;
     margin-top: 25px;
     padding: 25px 0 0;
@@ -846,7 +850,7 @@ pre {
     color: #444;
     margin: -10px 0;
     padding: 5px 10px;
-    border: 1px solid #ddd;
+    border: 1px solid $primary-border-color;
     border-radius: 5px;
     float: right;
     &:after {
@@ -856,7 +860,7 @@ pre {
     }
     &:hover {
         background: #F8F8F8;
-        border-bottom-color: #D26911;
+        border-color: $emphasis-color;
     }
 }
 
@@ -1015,7 +1019,7 @@ pre {
 /* syntax highlight*/
 figure.highlight,
 .codeblock {
-    background:     #f7f8f8;
+    background:     $code-block-background-color;
     margin:         10px 0;
     line-height:    1.1em;
     color:          #333;
@@ -1055,7 +1059,7 @@ figure.highlight,
         font-size:     0.7em;
         padding:       0 15px 20px;
         margin:        0;
-        background:    #f7f8f8;
+        background:    $code-block-background-color;
         color:         #999999;
 
         a {
@@ -1065,12 +1069,12 @@ figure.highlight,
     }
     // Gutter which contains line numbers
     .gutter {
-        background:   #f7f8f8;
-        border-right: 1px solid #e6e6e6;
+        background:   $code-block-background-color;
+        border-right: 1px solid $code-line-number-color;
         padding:      0.3em 15px;
 
         .line {
-            color: #aaaaaa;
+            color: $code-line-number-color;
         }
     }
     // Code container
@@ -1743,7 +1747,7 @@ table {
   padding: 0 15px;
   color: #555;
   outline: none;
-  border: 1px solid #ddd;
+  border: 1px solid $primary-border-color;
   border-radius: 3px 3px 0 0;
   height: 36px;
   line-height: 36px;
