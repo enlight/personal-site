@@ -149,7 +149,11 @@ div {
             a {
                 line-height: 1.5;
                 padding: 5px;
-              }
+                border: 1px solid $primary-border-color;
+            }
+            a:hover {
+                border-color: $emphasis-color;
+            }
         }
         ul {
             list-style: none;
