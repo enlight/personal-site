@@ -65,6 +65,20 @@ div {
 .color-on-hover:hover {
     color: $emphasis-color;
 }
+a.heading-anchor {
+    float: left;
+    margin-left: -1.5em;
+    opacity: 0;
+    &:before {
+        font-family: "FontAwesome";
+        content: "\f13d";
+    }
+}
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+    a.heading-anchor {
+        opacity: 1;
+    }
+}
 #header {
     padding: 20px 0 0;
     text-align: left;
@@ -283,7 +297,6 @@ div {
         h2 {
             margin: 1.4em 0 1.1em;
             border-bottom: 1px solid #eee;
-            overflow: hidden;
         }
         h3 {
             margin: 1.4em 0 1.1em;

@@ -38,6 +38,7 @@ render_drafts: false
 post_asset_folder: false
 relative_link: true
 future: true
+## disable default highlighter so that the Code Mirror one can be used instead
 highlight:
   enable: false
   line_number: true
@@ -60,6 +61,17 @@ markdown:
     quotes: '“”‘’'
   plugins:
     - markdown-it-abbr
+  anchors:
+    # Minimum level for ID creation. (Ex. h2 to h6)
+    level: 1
+    # A suffix that is prepended to the number given if the ID is repeated.
+    collisionSuffix: 'v'           
+    # If `true`, creates an anchor tag with a permalink besides the heading.
+    permalink: true
+    # Class used for the permalink anchor tag.
+    permalinkClass: heading-anchor 
+    # The symbol used to make the permalink
+    permalinkSymbol: ''
 
 # Category & Tag
 default_category: programming
