@@ -13,6 +13,7 @@ $emphasis-color: #7200FF;
 $primary-border-color: #ddd;
 $code-block-background-color: #f0f0f0;
 $code-line-number-color: #aaa;
+$code-font-family: Menlo, "Bitstream Vera", "Deja Vu", Consolas, monospace;
 
 /*
 pure css setting
@@ -103,6 +104,7 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
         .description {
             margin: .2em 0 0;
             color: #999;
+            font-family: $code-font-family;
         }
     }
     #nav-menu {
@@ -1046,7 +1048,7 @@ figure.highlight,
     .code,
     .tag {
         background-color: inherit;
-        font-family: Menlo, Consolas, monospace;
+        font-family: $code-font-family;
         border:      none;
         padding:     0;
         margin:      0;
@@ -1109,7 +1111,7 @@ figure.highlight,
 .gist {
     .line,
     .line-number {
-        font-family: Menlo, Consolas, monospace;
+        font-family: $code-font-family;
         font-size:   1em;
         margin:      0 0 5px 0;
     }

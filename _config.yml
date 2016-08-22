@@ -4,8 +4,8 @@
 
 # Site
 title: Vadim Macagon
-subtitle: Useful tidbits for software developers... 
-description: Programming
+subtitle: '/(software (developer|engineer))|programmer/' 
+description: A blog about programming.
 author: Vadim Macagon
 language: en
 timezone:
