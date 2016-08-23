@@ -3,35 +3,6 @@ if theme.fancybox == true
   script(type='text/javascript', src=url_for(theme.js) + '/fancybox.js' + '?v=' + theme.version, async)
   link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/jquery.fancybox.css' + '?v=' + theme.version)
 
-if theme.duoshuo
-  script.
-    var duoshuoQuery = {short_name:'#{theme.duoshuo}'};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0]
-            || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-
-if theme.tinysou
-  script.
-    var option = {
-      engineKey: '#{theme.tinysou}'
-    };
-    (function(w,d,t,u,n,s,e){
-      s = d.createElement(t);
-      s.src = u;
-      s.async = 1;
-      w[n] = function(r){
-        w[n].opts = r;
-      };
-      e = d.getElementsByTagName(t)[0];
-      e.parentNode.insertBefore(s, e);
-    })(window,document,'script','//tinysou-cdn.b0.upaiyun.com/ts.js','_ts');
-    _ts(option);
-
 if theme.swiftype
   script.
     (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
@@ -58,16 +29,6 @@ if theme.google_analytics
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
     ga('create','#{theme.google_analytics}','auto');ga('send','pageview');
-
-if theme.baidu_analytics
-  script.
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?#{theme.baidu_analytics}";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-      })();
 
 if page.mathjax
   include mathjax
