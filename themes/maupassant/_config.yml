@@ -34,15 +34,15 @@ widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts
 links:
   - title: My Twitter Profile
     text: macagonator
-    icon: fa-twitter
-    url: http://twitter.com/macagonator
+    icon: twitter
+    url: https://twitter.com/macagonator
   - title: My GitHub Profile 
     text: enlight
-    icon: fa-github
+    icon: github
     url: https://github.com/enlight
   - title: My BitBucket Profile 
     text: enlight
-    icon: fa-bitbucket
+    icon: bitbucket
     url: https://bitbucket.org/enlight
 
 timeline:

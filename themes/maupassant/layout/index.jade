@@ -29,7 +29,9 @@ block content
           .post-content
             != post.content.substring(0, br)
       p(class='readmore')
-        a(href=url_for(post.path))= __('Readmore')
+        a(href=url_for(post.path))
+          span= __('Readmore')
+          != fa_icon('angle-double-right', { width: '16px', height: '16px', ariaHidden: true })
 
   include _partial/paginator
   //if theme.disqus
