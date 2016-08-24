@@ -3,7 +3,7 @@
 
 'use strict';
 
-// Hexo filter that perform syntax highlighting of code using Code Mirror.
+// Hexo filter that performs syntax highlighting of code using Code Mirror.
 
 const stripIndent = require('strip-indent');
 var CodeMirror = require('codemirror/addon/runmode/runmode.node.js');
@@ -158,7 +158,7 @@ const rBacktick = /(\s*)(`{3,}|~{3,}) *(.*) *\n([\s\S]+?)\s*\2(\n+|$)/g;
 const rLangCaption = /([^\s]+)\s*(.+)?/;
 
 /**
- * Hexo filter function that perform syntax highlighting of code using Code Mirror.
+ * Hexo filter function that performs syntax highlighting of code using Code Mirror.
  * The code to be highlighted must be enclosed in a block delimited by
  * triple back-ticks (```) or triple tildes (~~~), the programming language the code is written in
  * must be specified after the opening delimiter, for example:
