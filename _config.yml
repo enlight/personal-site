@@ -99,6 +99,9 @@ font_awesome_icons:
   svg: font-awesome/fontawesome-webfont.svg
   yml: font-awesome/fontawesome-icons.yml
 
+sitemap:
+  path: sitemap.xml
+
 ## Themes: https://hexo.io/themes/
 theme: maupassant
 
