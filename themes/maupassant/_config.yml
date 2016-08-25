@@ -13,12 +13,10 @@ widgets_on_small_screens: false ## Set to true to enable widgets on small screen
 menu:
   - page: blog
     directory: .
-  - page: projects
-    directory: projects/
-  - page: about
-    directory: about/
   - page: archive
     directory: archives/
+  - page: about
+    directory: about/
   ##- page: timeline
   ##  directory: timeline/
   ##- page: rss
