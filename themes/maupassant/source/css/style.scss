@@ -65,12 +65,8 @@ div {
 }
 a.heading-anchor {
     float: left;
-    margin-left: -1.5em;
+    margin-left: -25px;
     opacity: 0;
-    &:before {
-        font-family: "FontAwesome";
-        content: "\f13d";
-    }
 }
 h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
     a.heading-anchor {

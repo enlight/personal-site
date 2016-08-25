@@ -140,7 +140,7 @@ function svgPropsToMarkup(props) {
 function inlineFontAwesomeIcon(symbol, options) {
   if (!svgCache) {
     const path = require('path');
-    const { svg, yml } = this.config.font_awesome_icons;
+    const { svg, yml } = hexo.config.font_awesome_icons;
     const svgFile = path.join(hexo.base_dir, svg);
     const ymlFile = path.join(hexo.base_dir, yml);
     loadSVGFont(svgFile, ymlFile);
@@ -151,6 +151,47 @@ function inlineFontAwesomeIcon(symbol, options) {
   } else {
     return '';
   }
+}
+
+// TODO: Don't run this when the module is loaded, this should run at a more appropriate time,
+//       perhaps when Hexo emits one of its events. 
+// The only way to add an icon to the output of the default renderer of anchors is to use a font,
+// to use inline SVGs gotta hijack the default anchor renderer in `hexo-renderer-markdown-it` and
+// replace it with a custom one.
+if (hexo.config.markdown && hexo.config.markdown.anchors) {
+  const assign = require('lodash.assign');
+  const Token = require('markdown-it/lib/token');
+  const MarkdownIt = require('markdown-it');
+  const md = new MarkdownIt({
+    html: true,
+    xhtmlOut: false,
+    breaks: false,
+    linkify: false,
+    typographer: false
+  });
+  hexo.config.markdown.anchors.renderPermalink = function (slug, opts, tokens, idx) {
+    const svgMarkup = inlineFontAwesomeIcon(
+      opts.permalinkSymbol, { width: '16px', height: '16px', ariaHidden: true }
+    );
+    // Feed the inline SVG to the Markdown parser to get a list of tokens that represent it,
+    // then inject those tokens into a link element, and inject the link element into the
+    // heading element.
+    // 
+    // md.parse() will actually generate an array of 3 tokens from the SVG markup
+    // (<p>,<svg/>,</p>), but only the children of the <svg/> seem to directly correspond
+    // to the SVG markup.  
+    const svgTokens = md.parse(svgMarkup, {})[1].children;
+    // tokens[idx] is the "heading_open" token that corresponds to the start tag of the heading
+    // element, but the tokens that represent the content of the heading element are actually
+    // stored in tokens[idx + 1].children.
+    tokens[idx + 1].children.unshift(
+      assign(new Token('link_open', 'a', 1), {
+        attrs: [['class', opts.permalinkClass], ['href', '#' + slug]]
+      }),
+      ...svgTokens,
+      new Token('link_close', 'a', -1)
+    );
+  };
 }
 
 // TODO: register a tag plugin so that icons can be inserted in markdown documents

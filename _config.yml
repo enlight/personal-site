@@ -70,8 +70,11 @@ markdown:
     permalink: true
     # Class used for the permalink anchor tag.
     permalinkClass: heading-anchor 
-    # The symbol used to make the permalink
-    permalinkSymbol: ''
+    # The symbol used to make the permalink, when using the default anchor renderer this should
+    # be a character or plain text. However, when font_awesome_icons is enabled it will hijack
+    # the default renderer and will expect the permalinkSymbol to match a FontAwesome icon id
+    # (in font_awesome_icons.yml). 
+    permalinkSymbol: 'anchor'
 
 # Category & Tag
 default_category: programming
