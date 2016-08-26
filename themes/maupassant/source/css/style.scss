@@ -86,12 +86,25 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
             height: 0;
             overflow: hidden;
         }
-        #logo {
-            font-weight: bold;
-            font-size: 2em;
-            color: black;
-            span {
-                color: #777;
+        #header-links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            #logo {
+                flex: none;
+                font-weight: bold;
+                font-size: 2em;
+                color: black;
+                span {
+                    color: #777;
+                }
+            }
+            .spacer {
+                flex: 1 0 auto;
+            }
+            .social-link {
+                flex: none;
+                display: none;
             }
         }
         .description {
@@ -447,6 +460,11 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
             text-align: left;
             .description {
                 font-size: 0.9em;
+            }
+            #header-links {
+                .social-link {
+                    display: inline-block;
+                }
             }
         }
         #nav-menu {
