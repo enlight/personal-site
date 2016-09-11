@@ -167,8 +167,14 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
             font-weight: normal;
         }
         .tagcloud {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
             margin-top: 10px;
             a {
+                flex: none;
+                margin-bottom: 5px;
                 line-height: 1.5;
                 padding: 5px;
                 border: 1px solid $primary-border-color;
