@@ -10,7 +10,7 @@
     "version": "3.3.8"
   },
   "dependencies": {
-    "codemirror": "^5.17.0",
+    "codemirror": "5.28.0",
     "csso-cli": "^1.0.0",
     "hexo": "git+https://github.com/hexojs/hexo.git",
     "hexo-generator-archive": "^0.1.4",
