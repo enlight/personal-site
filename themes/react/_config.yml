@@ -1,0 +1,42 @@
+disqus: vadimmacagon ## Your disqus_shortname, e.g. username
+google_search: true ## Use Google search, true/false.
+
+## Defines the top-right navigation menu/tabs.
+## Each tab can have an optional `icon` (identified by a FontAwesome class). 
+menu:
+  - page: blog
+    directory: .
+  - page: archive
+    directory: archives/
+  - page: about
+    directory: about/
+  ##- page: rss
+  ##  directory: atom.xml
+  ##  icon: fa-rss
+
+widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, recent_comments and links.
+  - search
+  - tag_cloud
+  - recent_posts
+  - social_links
+
+links:
+  - title: My Twitter Profile
+    text: macagonator
+    icon: twitter
+    url: https://twitter.com/macagonator
+  - title: My GitHub Profile 
+    text: enlight
+    icon: github
+    url: https://github.com/enlight
+  - title: My BitBucket Profile 
+    text: enlight
+    icon: bitbucket
+    url: https://bitbucket.org/enlight
+
+# Sub-directories containing static files
+js: js
+css: css
+
+# Theme version
+version: 0.0.0

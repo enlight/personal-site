@@ -4,12 +4,17 @@
   "private": true,
   "scripts": {
     "build": "hexo generate",
-    "minify": "csso ./node_modules/normalize.css/normalize.css themes/maupassant/source/css/normalize.min.css --restructure-off"
+    "build-theme": "tsc -p ./themes/react/layout/",
+    "minify": "csso ./node_modules/normalize.css/normalize.css themes/maupassant/source/css/normalize.min.css --restructure-off",
+    "server": "hexo server -s"
   },
   "hexo": {
     "version": "3.3.8"
   },
   "dependencies": {
+    "@types/moment": "^2.13.0",
+    "@types/node": "^6.0.86",
+    "@types/react": "^16.0.2",
     "codemirror": "5.28.0",
     "csso-cli": "^1.0.0",
     "hexo": "git+https://github.com/hexojs/hexo.git",
@@ -25,6 +30,9 @@
     "hexo-server": "^0.2.0",
     "js-yaml": "^3.6.1",
     "normalize.css": "^4.2.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "typescript": "^2.4.2",
     "xmldom": "^0.1.27"
   }
 }
