@@ -2,10 +2,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch",
+            "name": "Hexo Generate",
             "type": "node",
             "request": "launch",
-            "program": "C:\\Users\\vm\\AppData\\Roaming\\npm\\node_modules\\hexo-cli\\bin\\hexo",
+            "program": "${workspaceRoot}\\node_modules\\hexo-cli\\bin\\hexo",
             "stopOnEntry": true,
             "args": ["generate", "--debug"],
             "cwd": "${workspaceRoot}",
@@ -17,9 +17,8 @@
             "env": {
                 "NODE_ENV": "development"
             },
-            "externalConsole": false,
-            "sourceMaps": false,
-            "outDir": null
+            "console": "internalConsole",
+            "sourceMaps": false
         },
         {
             "name": "Attach",
