@@ -43,13 +43,17 @@ body {
     padding-right: 50px;
     padding-top: 20px;
 }
-a, button.submit {
+button.submit {
     color: #6E7173;
     text-decoration: none;
     -webkit-transition: all .1s ease-in;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     transition: all .1s ease-in;
+}
+a {
+    color: #6E7173;
+    text-decoration: none;
 }
 a:hover, a:active {
     color: #444;
