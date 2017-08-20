@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { IHexoHelpers, IHexoContext } from '../../hexo';
 
 interface ISocialLinksWidgetProps {
   theme: IHexoContext<{}>['theme'];

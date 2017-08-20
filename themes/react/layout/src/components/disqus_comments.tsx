@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { IHexoContext, IHexoPost } from '../hexo';
 
 const DisqusComments: React.SFC<IHexoContext<IHexoPost>> = (props) => {
   const { theme, page, config } = props;

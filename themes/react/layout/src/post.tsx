@@ -2,6 +2,7 @@ import * as React from 'react';
 import BasePage from './base';
 import PageTags from './components/page_tags';
 import PostNav from './components/post_nav';
+import { IHexoContext, IHexoPost } from './hexo';
 import DisqusComments from './components/disqus_comments';
 
 const PostPage: React.SFC<IHexoContext<IHexoPost>> = (props) => {

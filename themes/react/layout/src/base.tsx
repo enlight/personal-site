@@ -1,6 +1,7 @@
 import * as path from 'path';
 import * as React from 'react';
 import Sidebar from './components/sidebar';
+import { IHexoContext } from './hexo';
 
 const NavMenu: React.SFC<IHexoContext<{}>> = (props) => {
   const { theme, url_for, is_home, is_post, is_current, is_tag, is_category } = props;

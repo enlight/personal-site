@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { IHexoContext } from '../../hexo';
 
 const SearchWidget: React.SFC<IHexoContext<{}>> = (props) => {
   const { config } = props;

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { IHexoHelpers, IHexoPost } from '../hexo';
 
 interface IPostNavProps {
   page: IHexoPost;

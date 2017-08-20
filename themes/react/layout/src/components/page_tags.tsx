@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { IHexoPost, IHexoHelpers } from '../hexo';
 
 interface IPageTagsProps {
   page: IHexoPost;

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import BasePage from './base';
+import { IHexoContext, IHexoPage } from './hexo';
 
 const Page: React.SFC<IHexoContext<IHexoPage>> = (props) => {
   const { config, page } = props;

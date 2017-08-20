@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { IHexoHelpers } from '../../hexo';
 
 interface ITagCloudWidgetProps {
   tagcloud: IHexoHelpers['tagcloud'];

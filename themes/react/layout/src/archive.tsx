@@ -1,6 +1,7 @@
 import * as React from 'react';
 import BasePage from './base';
 import Paginator from './components/paginator';
+import { IHexoContext, IHexoCategoryPage, IHexoTagPage, IHexoArchivePage, IHexoPost } from './hexo';
 import { isTagPage, isCategoryPage, isArchivePage } from './hexo_utils';
 
 const ArchivePage: React.SFC<IHexoContext<IHexoCategoryPage | IHexoTagPage | IHexoArchivePage>> = (props) => {

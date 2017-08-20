@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import { IHexoHelpers } from '../hexo';
+
 interface IPaginatorProps {
   paginator: IHexoHelpers['paginator'];
 }

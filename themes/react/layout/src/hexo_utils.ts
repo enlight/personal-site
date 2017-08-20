@@ -1,3 +1,5 @@
+import { IHexoAnyPage, IHexoTagPage, IHexoCategoryPage, IHexoArchivePage } from './hexo';
+
 export function isTagPage(page: IHexoAnyPage): page is IHexoTagPage {
   return (page as IHexoTagPage).tag ? true : false;
 }

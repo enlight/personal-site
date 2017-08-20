@@ -1,4 +1,5 @@
-//import { Moment } from 'moment';
+import { Moment } from 'moment';
+import * as lodash from 'lodash';
 
 interface IMenuItem {
   page: string;
@@ -45,7 +46,7 @@ interface IHexoContext<TPageVars> extends IHexoHelpers {
   page: TPageVars;
   config: ISiteConfig;
   theme: IThemeConfig;
-  _: any; //FIXME: lodash
+  _: typeof lodash;
 }
 
 interface IHexoTag {
@@ -56,7 +57,7 @@ interface IHexoTag {
 interface IHexoPage {
   title?: string;
   description?: string;
-  date?: any; //FIXME: should be Moment;
+  date: Moment;
   content: string;
   excerpt?: string;
   path: string;

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as path from 'path';
+import { IHexoContext } from '../hexo';
 
 const Sidebar: React.SFC<IHexoContext<{}>> = (props) => {
   const widgets = props.theme.widgets.map(widgetName => {

@@ -51,7 +51,6 @@
     // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
   },
   "files": [
-    "./src/hexo.d.ts",
     "./src/index.tsx",
     "./src/page.tsx",
     "./src/post.tsx",

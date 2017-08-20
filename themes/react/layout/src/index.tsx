@@ -1,6 +1,7 @@
 import * as React from 'react';
 import BasePage from './base';
 import Paginator from './components/paginator';
+import { IHexoIndexPage, IHexoPost, IHexoHelpers, IHexoContext } from './hexo';
 
 function getPostDescription(post: IHexoPost): JSX.Element | null {
   if (post.description) {

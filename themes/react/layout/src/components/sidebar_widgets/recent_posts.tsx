@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { IHexoHelpers } from '../../hexo';
 
 interface IRecentPostsWidgetProps {
   list_posts: IHexoHelpers['list_posts'];
