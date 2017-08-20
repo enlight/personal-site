@@ -103,7 +103,7 @@ sitemap:
   path: sitemap.xml
 
 ## Themes: https://hexo.io/themes/
-theme: maupassant
+theme: react
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

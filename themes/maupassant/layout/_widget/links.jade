@@ -1,8 +1,0 @@
-.widget
-  .widget-title social
-  ul
-    for social_link in theme.links
-      li.color-on-hover
-        a(href='#{social_link.url}' rel='noopener noreferrer' title='#{social_link.title}' target='_blank')
-          != fa_icon(social_link.icon, { width: '16px', height: '16px', ariaHidden: true })
-          = social_link.text
