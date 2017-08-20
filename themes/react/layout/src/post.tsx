@@ -16,7 +16,7 @@ const PostPage: React.SFC<IHexoHelpers & IHexoGlobalVars<IHexoPostVars>> = (prop
         }/>
         { page.tags ? <PageTags {...props}/> : null }
         { (page.next || page.prev) ? <PostNav {...props}/> : null }
-        { theme.disqus ? <DisqusComments/> : null }
+        { theme.disqus ? <DisqusComments {...props}/> : null }
       </div>
     </BasePage>
   );
