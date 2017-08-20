@@ -7,3 +7,6 @@ public/*
 .deploy*/
 .BROWSE.VC.DB
 .BROWSE.VC.DB-wal
+themes/react/layout/*.js
+themes/react/layout/components/*.js
+themes/react/layout/components/sidebar_widgets/*.js
