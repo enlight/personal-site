@@ -19,7 +19,7 @@ function getPostDescription(post: IHexoPost): JSX.Element | null {
 }
 
 interface IIndexPagePostProps {
-  config: IHexoGlobalVars<IHexoIndexPageVars>['config'];
+  config: IHexoContext<IHexoIndexPage>['config'];
   post: IHexoPost;
   url_for: IHexoHelpers['url_for'];
   fa_icon: IHexoHelpers['fa_icon'];
@@ -47,7 +47,7 @@ const IndexPagePost: React.SFC<IIndexPagePostProps> = (props) => {
   );
 };
 
-const IndexPage: React.SFC<IHexoHelpers & IHexoGlobalVars<IHexoIndexPageVars>> = (props) => {
+const IndexPage: React.SFC<IHexoContext<IHexoIndexPage>> = (props) => {
   const { config, page, site } = props;
   const posts = site.posts.toArray().map(post => <IndexPagePost post={post} {...props} key={post.path}/>);
   return (

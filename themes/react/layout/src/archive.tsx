@@ -30,7 +30,7 @@ block content
   include _partial/paginator.jade
 */
 
-const ArchivePage: React.SFC<IHexoHelpers & IHexoGlobalVars<IHexoCategoryPageVars | IHexoTagPageVars | IHexoArchivePageVars>> = (props) => {
+const ArchivePage: React.SFC<IHexoContext<IHexoCategoryPage | IHexoTagPage | IHexoArchivePage>> = (props) => {
   const { config, page, site, url_for, _ } = props;
   let title, readingLabel;
   if (isCategoryPage(page)) {

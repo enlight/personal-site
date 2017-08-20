@@ -4,7 +4,7 @@ import PageTags from './components/page_tags';
 import PostNav from './components/post_nav';
 import DisqusComments from './components/disqus_comments';
 
-const PostPage: React.SFC<IHexoHelpers & IHexoGlobalVars<IHexoPostVars>> = (props) => {
+const PostPage: React.SFC<IHexoContext<IHexoPost>> = (props) => {
   const { theme, config, page, site } = props;
   return (
     <BasePage title={page.title + ' | ' + config.title} {...props}>

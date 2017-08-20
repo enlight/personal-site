@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 interface ISocialLinksWidgetProps {
-  theme: IHexoGlobalVars<{}>['theme'];
+  theme: IHexoContext<{}>['theme'];
   fa_icon: IHexoHelpers['fa_icon'];
 }
 

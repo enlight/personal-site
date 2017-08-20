@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const DisqusComments: React.SFC<IHexoGlobalVars<IHexoPostVars>> = (props) => {
+const DisqusComments: React.SFC<IHexoContext<IHexoPost>> = (props) => {
   const { theme, page, config } = props;
   return (
     <div id="disqus_thread">

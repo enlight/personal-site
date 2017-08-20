@@ -1,7 +1,7 @@
 import * as React from 'react';
 import BasePage from './base';
 
-const Page: React.SFC<IHexoHelpers & IHexoGlobalVars<IHexoPageVars>> = (props) => {
+const Page: React.SFC<IHexoContext<IHexoPage>> = (props) => {
   const { config, page } = props;
   return (
     <BasePage title={`${page.title} | ${config.title}`} {...props}>

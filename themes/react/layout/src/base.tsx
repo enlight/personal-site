@@ -2,7 +2,7 @@ import * as path from 'path';
 import * as React from 'react';
 import Sidebar from './components/sidebar';
 
-const NavMenu: React.SFC<IHexoHelpers & IHexoGlobalVars<{}>> = (props) => {
+const NavMenu: React.SFC<IHexoContext<{}>> = (props) => {
   const { theme, url_for, is_home, is_post, is_current, is_tag, is_category } = props;
   const items = theme.menu.map(item => {
     const url = url_for(item.directory)
@@ -16,7 +16,7 @@ const NavMenu: React.SFC<IHexoHelpers & IHexoGlobalVars<{}>> = (props) => {
   return <div id="nav-menu">{items}</div>;
 };
 
-interface IPageHeaderProps extends IHexoHelpers, IHexoGlobalVars<{}> {
+interface IPageHeaderProps extends IHexoContext<{}> {
   currentTitle: string;
 }
 
@@ -33,7 +33,7 @@ const PageHeader: React.SFC<IPageHeaderProps> = (props) => {
   );
 };
 
-const PageFooter: React.SFC<IHexoHelpers & IHexoGlobalVars<{}>> = (props) => {
+const PageFooter: React.SFC<IHexoContext<{}>> = (props) => {
   const { url_for, config } = props;
   return (
     <div id="footer">
@@ -49,7 +49,7 @@ const PageFooter: React.SFC<IHexoHelpers & IHexoGlobalVars<{}>> = (props) => {
 
 const Rocket: React.SFC = (props) => <a id="rocket" className="show" href="#top"/>;
 
-interface IBasePageProps extends IHexoHelpers, IHexoGlobalVars<any> {
+interface IBasePageProps extends IHexoContext<any> {
   title: string;
 }
 

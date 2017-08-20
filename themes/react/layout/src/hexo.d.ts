@@ -40,7 +40,7 @@ interface IHexoSite {
   posts: { toArray: () => IHexoPost[] };
 }
 
-interface IHexoGlobalVars<TPageVars> {
+interface IHexoContext<TPageVars> extends IHexoHelpers {
   site: IHexoSite;
   page: TPageVars;
   config: ISiteConfig;
@@ -53,48 +53,39 @@ interface IHexoTag {
   path: string;
 }
 
-interface IHexoPageVars {
+interface IHexoPage {
   title?: string;
   description?: string;
   date?: any; //FIXME: should be Moment;
   content: string;
   excerpt?: string;
   path: string;
-  prev: IHexoPost | null;
-  next: IHexoPost | null;
+  prev: this | null;
+  next: this | null;
 }
 
-interface IHexoPostVars extends IHexoPageVars {
-  tags: IHexoTag[];
+interface IHexoPost extends IHexoPage {
+  tags: { toArray: () => IHexoTag[] };
 }
 
-interface IHexoIndexPageVars {
+interface IHexoIndexPage {
   next: number;
   prev: number;
 }
 
-interface IHexoArchivePageVars extends IHexoIndexPageVars {
+interface IHexoArchivePage extends IHexoIndexPage {
   archive: true;
 }
 
-interface IHexoCategoryPageVars extends IHexoIndexPageVars {
+interface IHexoCategoryPage extends IHexoIndexPage {
   category: string;
 }
 
-interface IHexoTagPageVars extends IHexoIndexPageVars {
+interface IHexoTagPage extends IHexoIndexPage {
   tag: string;
 }
 
-type IHexoAnyPageVars = IHexoPageVars | IHexoPostVars | IHexoIndexPageVars | IHexoArchivePageVars | IHexoCategoryPageVars | IHexoTagPageVars;
-
-interface IHexoPost {
-  title?: string;
-  date?: any; //FIXME: should be Moment;
-  description?: string;
-  content: string;
-  excerpt?: string;
-  path: string;
-}
+type IHexoAnyPage = IHexoPage | IHexoPost | IHexoIndexPage | IHexoArchivePage | IHexoCategoryPage | IHexoTagPage;
 
 interface IHexoHelpers {
   url_for(path: string): string;

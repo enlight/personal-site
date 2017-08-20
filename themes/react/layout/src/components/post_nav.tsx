@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 interface IPostNavProps {
-  page: IHexoPostVars;
+  page: IHexoPost;
   url_for: IHexoHelpers['url_for'];
   fa_icon: IHexoHelpers['fa_icon'];
 }

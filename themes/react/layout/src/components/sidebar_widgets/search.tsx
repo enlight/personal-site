@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const SearchWidget: React.SFC<IHexoGlobalVars<{}>> = (props) => {
+const SearchWidget: React.SFC<IHexoContext<{}>> = (props) => {
   const { config } = props;
   return (
     <div className="widget">
