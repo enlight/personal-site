@@ -72,6 +72,7 @@ interface IHexoPost extends IHexoPage {
 interface IHexoIndexPage {
   next: number;
   prev: number;
+  posts: { toArray: () => IHexoPost[] };
 }
 
 interface IHexoArchivePage extends IHexoIndexPage {

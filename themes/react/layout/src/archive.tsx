@@ -16,7 +16,7 @@ const ArchivePage: React.SFC<IHexoContext<IHexoCategoryPage | IHexoTagPage | IHe
   } else if (isArchivePage(page)) {
     title = 'Archive';
   }
-  const postsByYear = _.groupBy(site.posts.toArray(), (p: IHexoPost) => p.date.format('YYYY'));
+  const postsByYear = _.groupBy(page.posts.toArray(), (p: IHexoPost) => p.date.format('YYYY'));
   const posts: JSX.Element[] = [];
   for (let year in postsByYear) {
     posts.push(<h2 key={year}>{year}</h2>);
