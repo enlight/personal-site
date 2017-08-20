@@ -21,28 +21,11 @@ interface IPageHeaderProps extends IHexoHelpers, IHexoGlobalVars<{}> {
 }
 
 const PageHeader: React.SFC<IPageHeaderProps> = (props) => {
-  const { theme, config, url_for, fa_icon } = props;
-  const socialLinks = theme.links.map(social_link => {
-    return (
-      <a href={social_link.url} rel='noopener noreferrer'
-        title={social_link.title}
-        target='_blank'
-        className="social-link"
-        key={social_link.title}>
-        {fa_icon(social_link.icon, { width: '24px', height: '24px', ariaHidden: true })}
-      </a>
-    );
-  });
+  const { theme, config, url_for } = props;
   return (
     <div id="header">
       <div className="site-name">
-        <h1 className="hidden">{props.currentTitle}</h1>
-        <div id="header-links">
         <a id="logo" href={url_for('.')}>{config.title}</a>
-        <span className="spacer"></span>
-        {/* FIXME: What the heck are these doing here? They're not even visible! */}
-        {socialLinks}
-        </div>
         <p className="description">{config.subtitle}</p>
       </div>
       <NavMenu {...props} />
